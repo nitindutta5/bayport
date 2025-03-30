@@ -19,7 +19,7 @@ export default function ProductDetails() {
   },[quantity, price])
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-6">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-2 py-6">
     {/* Left Column - Images (Medium Size) */}
     <div className="col-span-12 md:col-span-[4]">
       <ImageGallery images={mockProduct.images} />
