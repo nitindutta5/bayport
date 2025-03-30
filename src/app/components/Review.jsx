@@ -9,7 +9,7 @@ const Review = ({ name, rating, text }) => {
           {/* Star Rating */}
           {[...Array(4)].map((_, index) => (
             <FaStar key={index} style={{color:"gold", width:"20px"}} />
-          ))}
+          ))} <span className="ml-2 text-sm">601 Reviews</span>
         </div>
         <span className="ml-2 font-semibold">{name}</span>
       </div>

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700","800"], // Specify required font weights
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Specify required font weights
   variable: "--font-poppins", // Define a CSS variable
 });
 
@@ -16,10 +16,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
-        <Header/>
+      <body className={`${poppins.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>

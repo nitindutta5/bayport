@@ -6,7 +6,7 @@ export default function AddToCartButton({ productId, quantity }) {
     return (
       <button
         onClick={handleAddToCart}
-        className="mt-auto bg-red-500 hover:bg-red-600 text-white py-2 px-4 w-full rounded-lg"
+        className="mt-auto bg-red-500 hover:bg-red-600 text-white py-2 px-4 w-full font-bold"
       >
         Add to Cart
       </button>

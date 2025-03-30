@@ -1,43 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FabricOptions from "../FabricOptions";
-import AssuranceOptions from "../AssuranceOptions";
 import AddToCartButton from "../AddToCart";
 import ImageGallery from "../ImageGallery";
 import MeasurementForm from "../MesaurementForm";
 import Review from "../Review";
+import { mockProduct } from "@/app/dummy";
 
-const mockProduct = {
-  id: "123",
-  name: "Rectangular Outdoor Custom Covers",
-  price: 6.28,
-  description: [
-    "Solid Protection: Rectangle-shaped custom covers defend your outdoor possessions",
-    "Durable Fabrication: Constructed of resilient weatherproof materials",
-    "Personalised Style: Choose from various fabrics and shades",
-  ],
-  images: [
-    "https://cdn.coversandall.com.au/media/catalog/product/s/q/square-tarp-grey.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=608&width=608&canvas=608:608",
-    "https://cdn.coversandall.com.au/media/catalog/product/T/a/Tarps001_H.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=608&width=608&canvas=608:608",
-    "https://cdn.coversandall.com.au/media/catalog/product/T/a/Tarps001_2.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=608&width=608&canvas=608:608",
-    "https://cdn.coversandall.com.au/media/catalog/product/T/a/Tarps001_3.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=608&width=608&canvas=608:608",
-  ],
-};
-
-export default function ProductDetails({ productId }) {
+export default function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
+  const [price,setPrice]= useState(mockProduct.price);
+
+  useEffect(() => {
+    let newPrice = mockProduct.price * quantity;
+    setPrice(newPrice)
+  },[quantity])
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-6">
     {/* Left Column - Images (Medium Size) */}
-    <div className="col-span-12 md:col-span-4">
+    <div className="col-span-12 md:col-span-[4]">
       <ImageGallery images={mockProduct.images} />
     </div>
   
     {/* Middle Column - Product Details (Largest) */}
-    <div className="col-span-12 md:col-span-6 overflow-y-auto h-[calc(100vh-100px)] py-4 md:pr-10">
-      <h1 className="text-xl font-semibold text-blue-800">{mockProduct.name}</h1>
+    <div className="col-span-12 md:col-span-6 overflow-y-auto h-[calc(100vh-100px)] py-4">
+      <h1 className="text-3xl font-medium text-[#003056]">{mockProduct.name}</h1>
       <Review />
       <ul className="list-disc pl-5 my-4 text-gray-700">
         {mockProduct.description.map((desc, index) => (
@@ -50,18 +39,15 @@ export default function ProductDetails({ productId }) {
   
       {/* Fabric Selection */}
       <FabricOptions />
-  
-      {/* Assurance Options */}
-      <AssuranceOptions />
     </div>
   
     {/* Right Column - Pricing & Cart Actions (Smallest) */}
-    <div className="col-span-12 md:col-span-2 flex flex-col justify p-4 bg-gray-50 rounded-lg shadow-sm">
+    <div className="col-span-12 md:col-span-2 flex flex-col justify p-4 bg-gray-50 border border-gray-200 shadow-sm">
       {/* Pricing Section */}
       <div className="text-center">
-        <p className="text-2xl font-bold text-blue-900">${mockProduct.price.toFixed(2)}</p>
+        <p className="text-2xl font-bold text-blue-900">${price.toFixed(2)}</p>
         <p className="text-gray-500 text-sm mt-1">
-          (Excl. GST: <span className="text-blue-700 font-semibold">${(mockProduct.price * 0.91).toFixed(2)}</span>)
+          (Excl. GST: <span className="text-blue-700 font-semibold">${(price * 0.91).toFixed(2)}</span>)
         </p>
       </div>
 
