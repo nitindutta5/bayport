@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { MdShield } from "react-icons/md"; // Warranty badge icon
 import { fabrics } from "../dummy";
 
-export default function FabricOptions() {
+export default function FabricOptions({setPrice}) {
   const [selectedFabric, setSelectedFabric] = useState(fabrics[0].name);
+
+  const fabricSelector =(fabric) => {
+    setSelectedFabric(fabric.name);
+    setPrice(fabric.price);
+  }
 
   return (
     <div className="my-6 p-4 bg-gray-50 border border-gray-300">
@@ -14,7 +19,7 @@ export default function FabricOptions() {
           return (
             <div
               key={fabric.name}
-              onClick={() => setSelectedFabric(fabric.name)}
+              onClick={() => fabricSelector(fabric)}
               className={`p-6 border border-gray-300 shadow-md cursor-pointer transition-all duration-300  
                 ${
                   isSelected

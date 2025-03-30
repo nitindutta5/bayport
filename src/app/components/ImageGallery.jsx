@@ -74,7 +74,7 @@ export default function ImageGallery({ images }) {
       {/* Main Carousel */}
       <Slider {...mainSettings} className="overflow-hidden mb-4">
         {images?.map((item, index) => (
-          <div key={index} className="flex justify-center">
+          <div key={index} className="flex justify-center p-2">
             <Image
               width={item.width}
               height={item.height}
