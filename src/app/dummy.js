@@ -91,3 +91,63 @@ export const mockProduct = {
     },
   ],
 };
+
+
+export const alsoViewedProducts = [
+    {
+      id: 1,
+      title: "Wedge shaped",
+      subtitle: "Outdoor Custom..",
+      price: "$5.71",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/c/u/custom_covers_-_design_8_vector_image.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+      id: 2,
+      title: "Adirondock High",
+      subtitle: "Chair Custom..",
+      price: "$107.05",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/c/u/custom-adirondack-chair-covers---design-7.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+      id: 3,
+      title: "Rectangular",
+      subtitle: "Outdoor Custom..",
+      price: "$5.71",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/c/u/custom-covers-design-2.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+      id: 4,
+      title: "Custom Covers",
+      subtitle: "",
+      price: "$9.90",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/c/u/custom-covers.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+      id: 5,
+      title: "Fire Column",
+      subtitle: "Custom Covers",
+      price: "$46.00",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/f/i/fire-column-covers-design-1.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+      id: 6,
+      title: "High Rock Long",
+      subtitle: "Outdoor Custom..",
+      price: "$125.71",
+      image: "https://cdn.coversandall.com.au/media/catalog/product/c/u/custom-covers-design-15.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+    },
+    {
+        id: 7,
+        title: "Fire Column",
+        subtitle: "Custom Covers",
+        price: "$46.00",
+        image: "https://cdn.coversandall.com.au/media/catalog/product/f/i/fire-column-covers-design-1.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+      },
+      {
+        id: 8,
+        title: "Fire Column",
+        subtitle: "Custom Covers",
+        price: "$46.00",
+        image: "https://cdn.coversandall.com.au/media/catalog/product/f/i/fire-column-covers-design-1.jpg?width=265&height=265&canvas=265,265&optimize=high&bg-color=255,255,255&fit=bounds"
+      },
+  ];

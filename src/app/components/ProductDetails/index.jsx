@@ -43,7 +43,7 @@ export default function ProductDetails() {
     </div>
   
     {/* Right Column - Pricing & Cart Actions (Smallest) */}
-    <div className="col-span-12 md:col-span-2 flex flex-col justify p-4 bg-gray-50 border border-gray-200 shadow-sm">
+    <div className="h-auto col-span-12 md:col-span-2 flex flex-col justify p-4 bg-gray-50 border border-gray-200 shadow-sm">
       {/* Pricing Section */}
       <div className="text-center">
         <p className="text-2xl font-bold text-blue-900">${totalPrice.toFixed(2)}</p>
@@ -55,16 +55,16 @@ export default function ProductDetails() {
       {/* Quantity Selector */}
       <div className="mt-4">
         <p className="text-sm font-medium text-gray-700 text-center">Quantity</p>
-        <div className="flex items-center justify-center border rounded-lg overflow-hidden mt-1">
+        <div className="flex items-center justify-center border overflow-hidden mt-1">
           <button
-            className="w-10 h-10 text-lg font-bold text-gray-700 border-r hover:bg-gray-200 transition"
+            className="w-full h-10 text-lg font-bold text-gray-700 border-r hover:bg-gray-200 transition"
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
           >
             -
           </button>
-          <span className="w-12 text-center text-lg font-semibold">{quantity}</span>
+          <span className="w-30 text-center text-lg font-semibold">{quantity}</span>
           <button
-            className="w-10 h-10 text-lg font-bold text-gray-700 border-l hover:bg-gray-200 transition"
+            className="w-full h-10 text-lg font-bold text-gray-700 border-l hover:bg-gray-200 transition"
             onClick={() => setQuantity((q) => q + 1)}
           >
             +
